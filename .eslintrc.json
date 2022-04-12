@@ -1,3 +1,68 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // "prettier/prettier": "warn",
+    "no-console": "off",
+    "prefer-object-spread": "warn",
+    "prefer-spread": "warn",
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "no-useless-escape": "off",
+    "camelcase": ["warn", { "properties": "never" }],
+    "no-new": "warn",
+    "new-cap": ["error", { "newIsCap": true, "capIsNew": false }],
+    "no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "react/prop-types": [
+      "warn",
+      {
+        "skipUndeclared": true,
+        "ignore": ["style", "children", "className", "theme"]
+      }
+    ],
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "pathGroupsExcludedImportTypes": ["react"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "after"
+          },
+          {
+            "pattern": "components/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "pages/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "curly": "error",
+    "react/react-in-jsx-scope": 0,
+    "indent": [ "warn", 2 ],
+    "linebreak-style": [ "warn", "unix" ],
+    "quotes": [ "warn", "single" ],
+    "semi": [ "warn", "never" ],
+    "max-len": [ "warn", {"code": 80}],
+    "no-empty-function": "off",
+    "no-use-before-define": "off"
+  }
 }

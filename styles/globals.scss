@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@600;700&display=swap');
+
+@tailwind base;
+
+#__next {
+  @apply min-h-screen flex flex-col w-full overflow-x-hidden text-dark bg-slate-50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  word-spacing: -0.625rem;
+  @apply font-mono font-bold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl
+}
+
+h2 {
+  @apply text-3xl md:text-4xl
+}
+
+h3 {
+  @apply text-2xl md:text-3xl
+}
+
+h4 {
+  @apply text-xl md:text-2xl
+}
+
+h5 {
+  @apply text-lg md:text-xl
+}
+
+h6 {
+  @apply text-base md:text-lg
+}
+
+a {
+  @apply transition-colors duration-300 hover:text-link focus-visible:outline-none focus-visible:ring-2 focus-visible:rounded focus-visible:ring-link;
+}
+
+section {
+  @apply grid grid-cols-12 gap-8 py-12 md:py-24;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.btn {
+  @apply font-mono font-semibold inline-block px-3 py-2 border border-dark rounded-md transition-all hover:border-link hover:scale-105 focus:scale-105 motion-reduce:transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-link focus-visible:border-link;
+}
